@@ -81,7 +81,10 @@ public class ChunkAnvil extends Chunk {
 			mapData.put(section, (ByteArrayTag) sectionTag.getTagWithName("Data"));
 
 			// Merge in the AddBlocks tag, if present
-			ByteArrayTag addBlocksTag = (ByteArrayTag) sectionTag.getTagWithName("AddBlocks");
+			
+			//ByteArrayTag addBlocksTag = (ByteArrayTag) sectionTag.getTagWithName("AddBlocks");
+			//Correct name is not AddBlock but just "Add"
+			ByteArrayTag addBlocksTag = (ByteArrayTag) sectionTag.getTagWithName("Add");
 			if (addBlocksTag != null)
 			{
 				ByteArrayTag dataTag = mapData.get(section);
